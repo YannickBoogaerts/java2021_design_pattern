@@ -1,6 +1,9 @@
 package be.technifutur.labyrinthe.builder;
 
-public class LabyrinthePositionImpl {
+import be.technifutur.labyrinthe.Direction;
+import be.technifutur.labyrinthe.LabyrinthePosition;
+
+public class LabyrinthePositionImpl implements LabyrinthePosition {
 
     private int line;
     private int column;
@@ -42,5 +45,10 @@ public class LabyrinthePositionImpl {
                 "line=" + line +
                 ", column=" + column +
                 '}';
+    }
+
+    @Override
+    public LabyrinthePosition getPosition(Direction direction) {
+        return null;
     }
 }

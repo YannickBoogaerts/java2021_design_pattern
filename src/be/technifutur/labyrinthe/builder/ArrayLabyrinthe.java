@@ -16,6 +16,10 @@ public class ArrayLabyrinthe implements Labyrinthe {
 
     }
 
+    void setEntry(int line, int column){
+
+    }
+
     @Override
     public LabyrintheElement getEntry() {
         return null;
