@@ -5,8 +5,8 @@ import be.technifutur.labyrinthe.LabyrinthePosition;
 
 public class LabyrinthePositionImpl implements LabyrinthePosition {
 
-    private int line;
-    private int column;
+    private final int line;
+    private final int column;
 
     public LabyrinthePositionImpl(int line, int column) {
         this.line = line;
@@ -49,6 +49,11 @@ public class LabyrinthePositionImpl implements LabyrinthePosition {
 
     @Override
     public LabyrinthePosition getPosition(Direction direction) {
-        return null;
+        return switch (direction) {
+            case NORD -> new LabyrinthePositionImpl(line - 1, column);
+            case EST -> new LabyrinthePositionImpl(line, column + 1);
+            case SUD -> new LabyrinthePositionImpl(line + 1, column);
+            case OUEST -> new LabyrinthePositionImpl(line, column - 1);
+        };
     }
 }
