@@ -5,5 +5,6 @@ import be.technifutur.labyrinthe.LabyrinthePosition;
 public interface LabyrintheElement {
 
     String getDescription();
+
     LabyrinthePosition getPosition();
 }

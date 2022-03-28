@@ -1,6 +1,6 @@
 package be.technifutur.labyrinthe.builder;
 
-import be.technifutur.labyrinthe.LabyrintheElement;
+import be.technifutur.labyrinthe.Labyrinthe;
 import be.technifutur.labyrinthe.LabyrintheFactory;
 
 public interface LabyrintheBuilder {
@@ -9,5 +9,6 @@ public interface LabyrintheBuilder {
     void addMur(int lig, int col);
     void addPorte(int lig, int col);
     void addPiece(int lig, int col);
+    void end();
     Labyrinthe getLabyrinthe();
 }
