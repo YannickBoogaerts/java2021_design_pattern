@@ -25,6 +25,11 @@ public class ArrayLabyrintheBuilder implements LabyrintheBuilder{
     }
 
     @Override
+    public void setEntry(int lig, int col) {
+
+    }
+
+    @Override
     public void end() {
 
     }
