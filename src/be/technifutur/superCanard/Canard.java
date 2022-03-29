@@ -34,4 +34,5 @@ public abstract class Canard {
     public ComportementCanCan getComportementCancan() {
         return comportementCancan;
     }
+
 }

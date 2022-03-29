@@ -11,5 +11,4 @@ public interface LabyrintheBuilder {
     void addPiece(int lig, int col);
     void setEntry(int lig, int col);
     void end();
-    Labyrinthe getLabyrinthe();
 }

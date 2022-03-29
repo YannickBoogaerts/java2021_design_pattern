@@ -5,6 +5,8 @@ import be.technifutur.labyrinthe.Labyrinthe;
 import be.technifutur.labyrinthe.LabyrintheElement;
 import be.technifutur.labyrinthe.LabyrinthePosition;
 
+import java.util.Arrays;
+
 public class ArrayLabyrinthe implements Labyrinthe {
 
     private final LabyrintheElement[][] grille;
@@ -30,8 +32,16 @@ public class ArrayLabyrinthe implements Labyrinthe {
     }
 
     @Override
-    public LabyrintheElement getElement(LabyrintheElement element, Direction direction) {
-        LabyrinthePosition destination = element.getPosition().getPosition(direction);
+    public LabyrintheElement getElement(LabyrintheElement origine, Direction direction) {
+        LabyrinthePosition destination = origine.getPosition().getPosition(direction);
         return grille[destination.getLine()][destination.getColumn()];
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayLabyrinthe{" +
+                "grille=" + Arrays.deepToString(grille) +
+                ", entry=" + entry +
+                '}';
     }
 }

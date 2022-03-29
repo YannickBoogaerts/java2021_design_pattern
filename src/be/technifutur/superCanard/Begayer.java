@@ -11,4 +11,15 @@ public class Begayer implements ComportementCanCan {
     public String cancaner() {
         return cri.cancaner()+cri.cancaner();
     }
+
+    @Override
+    public Object clone(){
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

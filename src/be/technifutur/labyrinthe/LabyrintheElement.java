@@ -1,6 +1,7 @@
 package be.technifutur.labyrinthe;
 
 import be.technifutur.labyrinthe.LabyrinthePosition;
+import be.technifutur.labyrinthe.visitor.LabyrintheVisitor;
 
 public interface LabyrintheElement {
 
@@ -9,4 +10,6 @@ public interface LabyrintheElement {
     LabyrinthePosition getPosition();
 
     void setPosition(LabyrinthePosition position);
+
+    void accepteVisiteur(LabyrintheVisitor visitor);
 }

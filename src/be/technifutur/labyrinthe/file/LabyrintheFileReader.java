@@ -10,8 +10,9 @@ import java.util.Scanner;
 
 public class LabyrintheFileReader {
 
-    void read(File file, LabyrintheBuilder builder, LabyrintheFactory factory) {
+    public void read(File file, LabyrintheBuilder builder, LabyrintheFactory factory) {
         try (Scanner scan = new Scanner(file)) {
+
             ArrayList<String> list = new ArrayList<>();
             int nbLine = 0;
             int nbCol = 0;
@@ -23,6 +24,7 @@ public class LabyrintheFileReader {
                 }
                 list.add(s);
             }
+
             builder.begin(nbLine, nbCol, factory);
             for (int lig = 0; lig < list.size(); lig++) {
                 String s = list.get(lig);
@@ -36,6 +38,10 @@ public class LabyrintheFileReader {
                         }
                         case 'm' -> {
                             builder.addMur(lig, col);
+                        }
+                        case 'e' ->{
+                            builder.addPiece(lig, col);
+                            builder.setEntry(lig, col);
                         }
                     }
                 }

@@ -1,5 +1,7 @@
 package be.technifutur.labyrinthe;
 
+import be.technifutur.labyrinthe.visitor.LabyrintheVisitor;
+
 public abstract class AbstractLabyrintheElement {
 
     private LabyrinthePosition position;
@@ -11,4 +13,6 @@ public abstract class AbstractLabyrintheElement {
     public void setPosition(LabyrinthePosition position) {
         this.position = position;
     }
+
+
 }

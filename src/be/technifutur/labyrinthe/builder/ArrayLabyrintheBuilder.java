@@ -31,7 +31,7 @@ public class ArrayLabyrintheBuilder implements LabyrintheBuilder{
 
     @Override
     public void setEntry(int lig, int col) {
-
+labyrinthe.setEntry(lig,col);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class ArrayLabyrintheBuilder implements LabyrintheBuilder{
 
     }
 
-    @Override
+
     public Labyrinthe getLabyrinthe() {
         return this.labyrinthe;
     }

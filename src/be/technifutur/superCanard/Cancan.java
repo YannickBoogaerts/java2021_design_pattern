@@ -5,4 +5,14 @@ public class Cancan implements ComportementCanCan{
     public String cancaner() {
         return null;
     }
+    @Override
+    public Object clone(){
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
