@@ -23,7 +23,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Joueur joueur = new Joueur(laby);
         do {
-            System.out.println("direction (n,e,s,o): ");
+            System.out.print("direction (n,e,s,o): ");
             Direction d = switch (scan.nextLine()) {
                 case "n" -> Direction.NORD;
                 case "e" -> Direction.EST;
